@@ -7,5 +7,16 @@ Ngon: Cho câu trả lời đúng với nhu cầu của người dùng
 Bổ: Sử dụng tập dữ liệu instruction lớn nhất trên tiếng Việt
 Rẻ: Được optimize và quantize mọi người đều có thể sử dụng
 
+## Sử dụng Vietcuna
+Vietcuna được tích hợp với HuggingFace
+1) Khởi đầu bằng việc cài đặt Python và các lib cần thiết
+```python
+conda create -n 'vietcuna' python=3.9
+conda activate vietcuna
+pip install -r requirements.txt
+```
+
+
+
 
 Mô hình ngôn ngữ lớn cho người Việt
