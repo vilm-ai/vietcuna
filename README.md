@@ -22,7 +22,7 @@ python launch.py
 - [x] Vietcuna 3B
 - [ ] Vietcuna 7B
 - [ ] Vietcuna 40B
-- [x] UI cho 
+- [x] UI Gradio
 ## Bản Quyền
 - Vietcuna miễn phí cho mục đích sử dụng cá nhân + nghiên cứu
 - Đối với doanh nghiệp, Vietcuna sẽ miễn phí cho đến khi doanh nghiệp đạt tổng doanh thu hơn 50,000,000 VND với sản phẩm sử dụng Vietcuna. Khi đó Vietcuna sẽ có phí tác quyền 10% trên tổng doanh thu từ sản phẩm
