@@ -6,7 +6,6 @@ Vietcuna là một mô hình ngôn ngữ lớn DÀNH CHO NGƯỜI VIỆT. Vì sa
 - Ngon: Cho câu trả lời đúng với nhu cầu của người dùng
 - Bổ: Sử dụng tập dữ liệu instruction lớn nhất trên tiếng Việt
 - Rẻ: Được optimize và quantize mọi người đều có thể sử dụng
-
 ## Sử dụng Vietcuna
 Vietcuna được tích hợp với HuggingFace
 1) Khởi đầu bằng việc cài đặt Python và các lib cần thiết
@@ -19,9 +18,9 @@ pip install -r requirements.txt
 ```python
 python launch.py
 ``` 
-
 ## Roadmap
 - [x] Vietcuna 3B
 - [ ] Vietcuna 7B
 - [ ] Vietcuna 40B
-- [x] UI cho Vietcuna
+- [x] UI cho 
+## Bản Quyền
