@@ -173,7 +173,7 @@ with gr.Blocks(
 ) as demo:
     conversation_id = gr.State(get_uuid)
     gr.Markdown(
-        """<h1><center>Guanaco Demo</center></h1>
+        """<h1><center>Vietcuna Demo</center></h1>
 """
     )
     chatbot = gr.Chatbot().style(height=500)
@@ -186,9 +186,9 @@ with gr.Blocks(
             ).style(container=False)
         with gr.Column():
             with gr.Row():
-                submit = gr.Button("Submit")
-                stop = gr.Button("Stop")
-                clear = gr.Button("Clear")
+                submit = gr.Button("Gửi")
+                stop = gr.Button("Dừng")
+                clear = gr.Button("Xoá")
     with gr.Row():
         with gr.Accordion("Advanced Options:", open=False):
             with gr.Row():
@@ -249,7 +249,7 @@ with gr.Blocks(
         )
     with gr.Row():
         gr.Markdown(
-            "[Privacy policy](https://gist.github.com/samhavens/c29c68cdcd420a9aa0202d0839876dac)",
+            "[Privacy policy](https://https://github.com/vilm-ai/vietcuna)",
             elem_classes=["disclaimer"],
         )
 
