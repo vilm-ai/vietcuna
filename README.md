@@ -15,8 +15,13 @@ conda create -n 'vietcuna' python=3.9
 conda activate vietcuna
 pip install -r requirements.txt
 ```
+2) Khởi động Vietcuna
+```python
+python launch.py
+``` 
 
-
-
-
-Mô hình ngôn ngữ lớn cho người Việt
+## Roadmap
+- [x] Vietcuna 3B
+- [ ] Vietcuna 7B
+- [ ] Vietcuna 40B
+- [x] UI cho Vietcuna
