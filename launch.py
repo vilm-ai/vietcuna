@@ -13,25 +13,24 @@ import torch
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList, TextIteratorStreamer
 
-base_model = 'bigscience/bloomz-3b'
-model_name = 'vilm/vietcuna-3b-qlora'
+model_name = 'vilm/vietcuna-3b'
 
 print(f"Starting to load the model {base_model} into memory")
 
 m = AutoModelForCausalLM.from_pretrained(
-    base_model,
+    model_name,
     load_in_4bit=args.4bit,
     torch_dtype=torch.bfloat16,
     device_map={"": 0}
 )
-m = PeftModel.from_pretrained(m, model_name)
-m = m.merge_and_unload()
-tok = AutoTokenizer.from_pretrained(base_model)
+# m = PeftModel.from_pretrained(m, model_name)
+# m = m.merge_and_unload()
+tok = AutoTokenizer.from_pretrained(model_name)
 tok.bos_token_id = 1
 
 stop_token_ids = [2]
 
-print(f"Successfully loaded the model {base_model} into memory")
+print(f"Successfully loaded the model {model_name} into memory")
 
 import datetime
 import os
