@@ -15,7 +15,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, 
 
 model_name = 'vilm/vietcuna-3b'
 
-print(f"Starting to load the model {base_model} into memory")
+print(f"Starting to load the model {model_name} into memory")
 
 m = AutoModelForCausalLM.from_pretrained(
     model_name,
