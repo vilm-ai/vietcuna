@@ -23,8 +23,7 @@ m = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.bfloat16,
     device_map={"": 0}
 )
-# m = PeftModel.from_pretrained(m, model_name)
-# m = m.merge_and_unload()
+
 tok = AutoTokenizer.from_pretrained(model_name)
 tok.bos_token_id = 1
 
