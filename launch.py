@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser()
 
 # Add arguments
 parser.add_argument('-n', '--model_name', type=str, help='Specify a model name')
-parser.add_argument('--4bit', action='store_true', help='Whether to use 4bit')
+parser.add_argument('--four-bit', action='store_true', help='Whether to use 4bit')
 
 args = parser.parse_args()
 
@@ -19,7 +19,7 @@ print(f"Starting to load the model {model_name} into memory")
 
 m = AutoModelForCausalLM.from_pretrained(
     model_name,
-    load_in_4bit=args.4bit,
+    load_in_4bit=args.four_bit,
     torch_dtype=torch.bfloat16,
     device_map={"": 0}
 )
