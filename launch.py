@@ -4,7 +4,7 @@ import argparse
 parser = argparse.ArgumentParser()
 
 # Add arguments
-parser.add_argument('-n', '--model_name', type=str, help='Specify a model name', default='vilm/vietcuna-3b')
+parser.add_argument('-n', '--model_name', type=str, help='Specify a model name', default='vilm/vietcuna-3b', choices=['vilm/vietcuna-3b', 'vilm/vietcuna-7b'])
 parser.add_argument('--four-bit', action='store_true', help='Whether to use 4bit')
 
 args = parser.parse_args()
