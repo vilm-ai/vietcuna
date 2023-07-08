@@ -4,7 +4,7 @@ import argparse
 parser = argparse.ArgumentParser()
 
 # Add arguments
-parser.add_argument('-n', '--model_name', type=str, help='Specify a model name')
+parser.add_argument('-n', '--model_name', type=str, help='Specify a model name', default='vilm/vietcuna-3b')
 parser.add_argument('--four-bit', action='store_true', help='Whether to use 4bit')
 
 args = parser.parse_args()
@@ -13,7 +13,12 @@ import torch
 from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList, TextIteratorStreamer
 
-model_name = 'vilm/vietcuna-3b'
+if args.model_name == 'vietcuna-3b':
+    model_name = 'vilm/vietcuna-3b'
+elif args.model_name == 'vietcuna-7b':
+    model_name = 'vilm/vietcuna-7b-alpha'
+else:
+    raise ValueError("Unsupported model_name. Please choose either 'vietcuna-3b' or 'vietcuna-7b'.")
 
 print(f"Starting to load the model {model_name} into memory")
 
@@ -39,7 +44,7 @@ from uuid import uuid4
 import gradio as gr
 import requests
 
-max_new_tokens = 512
+max_new_tokens = 512 if model_name == 'vilm/vietcuna-3b' else 1024
 start_message = """Below is an instruction that describes a task.
 Write a response that appropriately completes the request.\n\n"""
 
